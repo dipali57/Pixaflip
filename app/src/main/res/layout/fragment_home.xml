@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:background="@color/background">
+
+
+    <com.spark.submitbutton.SubmitButton
+        android:id="@+id/showPdf"
+        android:layout_width="252dp"
+        android:layout_height="124dp"
+        android:text=" Show PDF "
+        android:textColor="#053333"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558"
+        app:sub_btn_background="@color/white"
+        app:sub_btn_duration="3000"
+        app:sub_btn_line_color="@color/green"
+        app:sub_btn_ripple_color="@color/green"
+        />
+
+    <com.spark.submitbutton.SubmitButton
+        android:id="@+id/playVideo"
+        android:layout_width="246dp"
+        android:layout_height="107dp"
+        android:text="Play Video"
+        android:textColor="#053333"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.313"
+        app:sub_btn_background="@color/white"
+        app:sub_btn_duration="3000"
+        app:sub_btn_line_color="@color/green"
+        app:sub_btn_ripple_color="@color/green"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
