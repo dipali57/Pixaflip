@@ -40,4 +40,9 @@ dependencies {
 
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
     implementation 'me.spark:submitbutton:1.0.1'
+
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:percent:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+
 }
