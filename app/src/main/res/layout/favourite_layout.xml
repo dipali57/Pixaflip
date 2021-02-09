@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="384dp"
+        android:layout_height="148dp"
+        android:layout_margin="20dp"
+        android:padding="40dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="7dp">
+
+        <ImageView
+            android:id="@+id/ImageV"
+            android:layout_width="100dp"
+            android:layout_height="124dp"
+            android:padding="10dp"
+            android:src="@drawable/pdficon" />
+
+        <TextView
+            android:id="@+id/TextV"
+            android:layout_width="257dp"
+            android:layout_height="122dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="20dp"
+            android:padding="40dp"
+            android:text="PDF Files"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

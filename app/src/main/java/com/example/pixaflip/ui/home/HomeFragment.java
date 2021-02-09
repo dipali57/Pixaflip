@@ -42,7 +42,7 @@ public class HomeFragment extends Fragment {
                 //play video in landscape mode.
                 Intent intent=new Intent(MainActivity.context, DisplayVideoActivity.class);
                 startActivity(intent);
-             // Toast.makeText(MainActivity.context,"Play video available in Assets folder",Toast.LENGTH_LONG).show();
+                // Toast.makeText(MainActivity.context,"Play video available in Assets folder",Toast.LENGTH_LONG).show();
 
             }
         });

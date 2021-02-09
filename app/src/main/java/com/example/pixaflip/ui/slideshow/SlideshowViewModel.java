@@ -6,13 +6,28 @@ import androidx.lifecycle.ViewModel;
 
 public class SlideshowViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
+    private String pdfName;
+    private String pdfUrl;
 
-    public SlideshowViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("Show Favorite PDF here which are marked in displayPdfActivity.");
+
+    public SlideshowViewModel(String pdfName, String pdfUrl) {
+        this.pdfName = pdfName;
+        this.pdfUrl = pdfUrl;
     }
-    public LiveData<String> getText() {
-        return mText;
+
+    public String getPdfName() {
+        return pdfName;
+    }
+
+    public void setPdfName(String pdfName) {
+        this.pdfName = pdfName;
+    }
+
+    public String getPdfUrl() {
+        return pdfUrl;
+    }
+
+    public void setPdfUrl(String pdfUrl) {
+        this.pdfUrl = pdfUrl;
     }
 }

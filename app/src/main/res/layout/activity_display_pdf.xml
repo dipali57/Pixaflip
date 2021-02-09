@@ -1,19 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<RelativeLayout tools:context=".DisplayPdfActivity"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/grad">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Myrecycler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad"
+    tools:context=".DisplayPdfActivity">
 
-    <ListView android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:id="@+id/myPDFList"
-        android:dividerHeight="2dp"
-        android:divider="#b5b5b5"
-        android:padding="10dp"
-        />
 
-</RelativeLayout>
+</androidx.recyclerview.widget.RecyclerView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="5dp"
+        app:cardCornerRadius="5dp"
+        android:padding="40dp"
+        android:layout_margin="10dp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ImageV"
+            android:layout_width="94dp"
+            android:layout_height="117dp"
+            android:padding="10dp"
+            android:src="@drawable/pdficon" />
+
+
+        <TextView
+            android:id="@+id/TextV"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="40dp"
+            android:text="PDF Files"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/FavLike"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/selector"
+            android:onClick="onToggleClick"
+            android:textOff=""
+            android:textOn="" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
