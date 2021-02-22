@@ -7,12 +7,14 @@
 
     <application
         android:allowBackup="true"
-
         android:label="@string/app_name"
-
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.slideshow.FavPdf"></activity>
+        <activity android:name=".ShowStates"></activity>
+        <activity android:name=".DetailInfo" />
+        <activity android:name=".StatesReport" />
+        <activity android:name=".DisplayCovidActivity" />
+        <activity android:name=".ui.slideshow.FavPdf" />
         <activity android:name=".ActivityPdf" />
         <activity
             android:name=".DisplayVideoActivity"
@@ -30,7 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

@@ -18,12 +18,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.558"
+        app:layout_constraintVertical_bias="0.465"
         app:sub_btn_background="@color/grey"
         app:sub_btn_duration="3000"
         app:sub_btn_line_color="@color/followers"
-        app:sub_btn_ripple_color="@color/green"
-        />
+        app:sub_btn_ripple_color="@color/green" />
 
     <com.spark.submitbutton.SubmitButton
         android:id="@+id/playVideo"
@@ -35,11 +34,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313"
+        app:layout_constraintVertical_bias="0.224"
         app:sub_btn_background="@color/grey"
         app:sub_btn_duration="3000"
         app:sub_btn_line_color="@color/followers"
         app:sub_btn_ripple_color="@color/green"
 
         />
+
+    <com.spark.submitbutton.SubmitButton
+        android:id="@+id/Report"
+        android:layout_width="246dp"
+        android:layout_height="257dp"
+        android:text="Covid Report "
+        android:textColor="@color/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.698"
+        app:sub_btn_background="@color/grey"
+        app:sub_btn_duration="3000"
+        app:sub_btn_line_color="@color/followers"
+        app:sub_btn_ripple_color="@color/green" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

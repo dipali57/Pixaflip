@@ -15,10 +15,14 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.pixaflip.ActivityPdf;
+import com.example.pixaflip.DisplayCovidActivity;
 import com.example.pixaflip.DisplayPdfActivity;
 import com.example.pixaflip.DisplayVideoActivity;
 import com.example.pixaflip.MainActivity;
 import com.example.pixaflip.R;
+
+import com.example.pixaflip.ShowStates;
 import com.spark.submitbutton.SubmitButton;
 
 public class HomeFragment extends Fragment {
@@ -34,7 +38,8 @@ public class HomeFragment extends Fragment {
 
         SubmitButton playVideo=root.findViewById(R.id.playVideo);
         SubmitButton showPdf=root.findViewById(R.id.showPdf);
-
+        SubmitButton viewReport=root.findViewById(R.id.Report);
+        //SubmitButton viewStatewise=root.findViewById(R.id.Statewise);
         playVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,8 +60,27 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        viewReport.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.context,DisplayCovidActivity.class);
+                startActivity(intent);
+            }
 
+        });
+/*
+        viewStatewise.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.context, ShowStates.class);
+                startActivity(intent);
+            }
+
+        });
+
+*/
         return root;
     }
 }
