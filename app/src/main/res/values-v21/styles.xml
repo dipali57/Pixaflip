@@ -5,4 +5,16 @@
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+
+
+        <style name="CustomFontStyle">
+            <item name="android:layout_width">fill_parent</item>
+            <item name="android:layout_height">wrap_content</item>
+            <item name="android:capitalize">characters</item>
+            <item name="android:typeface">monospace</item>
+            <item name="android:textSize">12pt</item>
+            <item name="android:textColor">#F7020202</item>/>
+        </style>
+
+
 </resources>

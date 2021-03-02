@@ -37,7 +37,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
     implementation 'me.spark:submitbutton:1.0.1'
     implementation "androidx.recyclerview:recyclerview:1.1.0"

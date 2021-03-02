@@ -19,6 +19,14 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder> 
     // creating a variable for array list and context.
     ArrayList<MyState> courseModalArrayList;
     private Context context;
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
 
     public void setData(ArrayList<MyState> courseModalArrayList)
     {
@@ -43,11 +51,11 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder> 
         // setting data to our views of recycler view.
         MyState modal = courseModalArrayList.get(position);
         holder.Location.setText(modal.getLoc());
-        holder.CasesI.setText(modal.getConfirmedCasesIndian());
+      /*  holder.CasesI.setText(modal.getConfirmedCasesIndian());
         holder.CasesF.setText(modal.getConfirmedCasesForeign());
         holder.Discharged.setText(modal.getDischarged());
         holder.Deaths.setText(modal.getDeaths());
-        holder.Total.setText(modal.getTotalConfirmed());
+        holder.Total.setText(modal.getTotalConfirmed());*/
 
     }
 
@@ -67,11 +75,23 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder> 
 
             // initializing our views with their ids.
             Location = itemView.findViewById(R.id.idLocation);
-            CasesI = itemView.findViewById(R.id.t2);
+         /*   CasesI = itemView.findViewById(R.id.t2);
             CasesF = itemView.findViewById(R.id.t3);
             Discharged = itemView.findViewById(R.id.t4);
             Deaths = itemView.findViewById(R.id.t5);
-            Total = itemView.findViewById(R.id.t6);
+            Total = itemView.findViewById(R.id.t6);*/
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mListener != null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION) {
+                            mListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 }

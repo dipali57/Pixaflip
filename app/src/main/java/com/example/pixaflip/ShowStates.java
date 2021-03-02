@@ -2,6 +2,7 @@ package com.example.pixaflip;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -25,8 +26,15 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class ShowStates extends AppCompatActivity {
+public class ShowStates extends AppCompatActivity implements StateAdapter.OnItemClickListener{
 
+
+    public static final String EXTRA_LOCATION = "Location";
+    public static final String EXTRA_CONFIRMEDI = "ConfirmedCasesI";
+    public static final String EXTRA_CONFIRMEDF = "ConfirmedCasesF";
+    public static final String EXTRA_DISCHARGED = "Discharged";
+    public static final String EXTRA_DEATHS = "Deaths";
+    public static final String EXTRA_TOTAL = "Total";
     // creating variables for
     // our ui components.
     private RecyclerView courseRV;
@@ -93,17 +101,18 @@ public class ShowStates extends AppCompatActivity {
                                 // its key value from our json object.
                                 // similarly we are extracting all the strings from our json object.
 
-                                MyState hero = new MyState(responseObj.getString("loc"),
-                                        "Cases Of India: "+responseObj.getString("confirmedCasesIndian"),
-                                        "Cases of foreign: "+responseObj.getString("confirmedCasesForeign"),
-                                        "Discharged: "+responseObj.getString("discharged"),
-                                        "Deaths: "+responseObj.getString("deaths"),
-                                        "Total confirmed: "+responseObj.getString("totalConfirmed"));
+                                MyState hero = new MyState(responseObj.getString("loc"),responseObj.getString("confirmedCasesIndian"),
+                                        responseObj.getString("confirmedCasesForeign"),
+                                        responseObj.getString("discharged"),
+                                        responseObj.getString("deaths"),
+                                        responseObj.getString("totalConfirmed"));
 
                                 courseModalArrayList.add(hero);
 
 
                                 buildRecyclerView();
+
+                                adapter.setOnItemClickListener(ShowStates.this);
 
                             }
                         }catch (JSONException e) {
@@ -136,5 +145,18 @@ public class ShowStates extends AppCompatActivity {
         // setting adapter to
         // our recycler view.
         courseRV.setAdapter(adapter);
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent detailIntent = new Intent(this, DetailActivity.class);
+        MyState clickedItem = courseModalArrayList.get(position);
+        detailIntent.putExtra(EXTRA_LOCATION, clickedItem.getLoc());
+        detailIntent.putExtra(EXTRA_CONFIRMEDI, clickedItem.getConfirmedCasesIndian());
+        detailIntent.putExtra(EXTRA_CONFIRMEDF, clickedItem.getConfirmedCasesForeign());
+        detailIntent.putExtra(EXTRA_DISCHARGED, clickedItem.getDischarged());
+        detailIntent.putExtra(EXTRA_DEATHS, clickedItem.getDeaths());
+        detailIntent.putExtra(EXTRA_TOTAL, clickedItem.getTotalConfirmed());
+        startActivity(detailIntent);
     }
 }

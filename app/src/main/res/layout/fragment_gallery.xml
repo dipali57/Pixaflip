@@ -66,11 +66,12 @@
                 android:layout_below="@+id/imgUser"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="15sp"
-                android:fontFamily="sans-serif-light"
-                android:text="Dipali Gunjal"
+                android:fontFamily="@font/amarante"
                 android:textColor="@color/background"
+                android:textSize="30sp"
+                android:text="Dipali Gunjal"
                 android:textStyle="bold"
-                android:textSize="32sp" />
+                />
 
 
             <TextView
@@ -79,12 +80,13 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_name"
                 android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@font/amarante"
+                android:textSize="15sp"
                 android:text="Android Developer"
                 android:textAllCaps="true"
                 android:textColor="@color/followers"
                 android:textStyle="bold"
-                android:textSize="14sp" />
+                 />
 
 
 
@@ -135,10 +137,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Email"
+                        android:fontFamily="@font/amarante"
                         android:drawableStart="@drawable/ic_email"
                         android:drawablePadding="5dp"
                         android:textColor="@color/headings"
-                        android:textSize="13sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -165,10 +168,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Address"
+                        android:fontFamily="@font/amarante"
                         android:drawableStart="@drawable/ic_location"
                         android:drawablePadding="5dp"
                         android:textColor="@color/headings"
-                        android:textSize="13sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -196,10 +200,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Phone"
+                        android:fontFamily="@font/amarante"
                         android:drawableStart="@drawable/ic_phone"
                         android:drawablePadding="5dp"
                         android:textColor="@color/headings"
-                        android:textSize="13sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -228,10 +233,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="College"
+                        android:fontFamily="@font/amarante"
+
                         android:drawableStart="@drawable/ic_college"
                         android:drawablePadding="5dp"
                         android:textColor="@color/headings"
-                        android:textSize="13sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -259,10 +266,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Linkedin"
+                        android:fontFamily="@font/amarante"
                         android:drawableStart="@drawable/ic_linkedin"
                         android:drawablePadding="5dp"
                         android:textColor="@color/headings"
-                        android:textSize="13sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -289,10 +297,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Github"
+                        android:fontFamily="@font/amarante"
                         android:drawableStart="@drawable/ic_github"
                         android:drawablePadding="5dp"
                         android:textColor="@color/headings"
-                        android:textSize="13sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="20dp"
+    tools:context=".DetailActivity"
+    android:background="@drawable/borderbackground">
+
+    <TextView
+        android:id="@+id/Location"
+        style="@style/CustomFontStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/amarante"
+        android:textColor="#D30B0B"
+        android:textSize="30sp"
+        android:text="Location Name "
+         />
+
+    <TextView
+        android:id="@+id/ConfirmedI"
+        style="@style/CustomFontStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/amarante"
+        android:text="Confirmed cases India :"
+        android:textColor="@color/background"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/ConfirmedF"
+        style="@style/CustomFontStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/amarante"
+        android:text="Confirmed cases foreign :"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/discharged"
+        style="@style/CustomFontStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/amarante"
+        android:text="Discharged :"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/deaths"
+        style="@style/CustomFontStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/amarante"
+        android:text="Deaths :"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/total"
+        style="@style/CustomFontStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/amarante"
+        android:text="Total Confirmed :"
+        android:textSize="25sp" />
+</LinearLayout>

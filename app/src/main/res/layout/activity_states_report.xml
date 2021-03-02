@@ -14,14 +14,6 @@
         android:orientation="vertical"
         android:background="@drawable/grad">
 
-        <!--ImageView to display our course image
-        <ImageView
-            android:id="@+id/idIVCourse"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_margin="5dp" />
-
-        text view for our course name-->
         <TextView
             android:id="@+id/idLocation"
             android:layout_width="match_parent"
@@ -29,18 +21,20 @@
             android:layout_margin="5dp"
             android:padding="5dp"
             android:text="Location"
+            android:fontFamily="@font/amarante"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
 
 
-        <!--text view for our batch name-->
+        <!--text view for our batch name
         <TextView
             android:id="@+id/t2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Confirmed case in india: "
+            android:fontFamily="@font/amarante"
             android:textSize="20sp"
             android:textColor="@color/black"/>
         <TextView
@@ -70,7 +64,7 @@
             android:layout_height="wrap_content"
             android:text="Total Confirmed: "
             android:textSize="20sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"/>-->
     </LinearLayout>
 
 

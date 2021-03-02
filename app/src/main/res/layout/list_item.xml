@@ -28,8 +28,9 @@
             android:layout_gravity="center"
             android:padding="40dp"
             android:text="PDF Files"
-            android:textColor="@color/black"
-            android:textSize="24dp"
+            android:fontFamily="@font/amarante"
+            android:textColor="@color/background"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <ToggleButton
