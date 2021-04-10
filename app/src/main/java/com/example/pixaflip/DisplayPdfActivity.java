@@ -14,15 +14,22 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Adapter;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.pixaflip.Data.MyFav;
 import com.example.pixaflip.Data.MyDbHandler;
 import com.example.pixaflip.ui.slideshow.FavAdapter;
 import com.example.pixaflip.ui.slideshow.SlideshowFragment;
+import com.example.pixaflip.user.UserDatabase;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+
+import static com.example.pixaflip.MainActivity.context;
 
 public class DisplayPdfActivity extends AppCompatActivity {
 
@@ -30,6 +37,15 @@ public class DisplayPdfActivity extends AppCompatActivity {
     static List<pdf> list;
     ToggleButton toggleButton;
     PDFAdapter adapter;
+
+    private UserDatabase dbHandler;
+
+    private String getDateTime()
+    {
+        SimpleDateFormat sd=new SimpleDateFormat ("yyyy-MM-ddcHH:mm:ss", Locale.getDefault ());
+        Date d=new Date();
+        return sd.format(d);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +84,25 @@ public class DisplayPdfActivity extends AppCompatActivity {
         adapter.setOnItemClickListener(new PDFAdapter.ItemClickListener() {
             @Override
             public void onItemClick(int pos) {
+
+                dbHandler= new UserDatabase(DisplayPdfActivity.this);
+                //  String pname pos.get
+                //  int x=getAda
+
+                String name = list.get(pos).getPdfName();
+
+                Log.d("pdfname",name);
+
+                Toast.makeText ( context,"name of pdf is"+name,Toast.LENGTH_SHORT ).show ();
+                // model m=new model();
+                //String from2 = m.setFrom1 ( "DisplayPdfActivity" );
+                // Sdb.tring name = list.get(pos).getPdfName();
+
+                dbHandler.Adduser( "DisplayPdfActivity",name,getDateTime () );
+                // String timestamp2 =m.setTimestamp ( getDateTime () );
+                // model pro = new model(from2,to2,timestamp2);
+                // db.Adduser (m);
+
                 Intent intent = new Intent(DisplayPdfActivity.this,ActivityPdf.class);
                 intent.putExtra("position",pos);
                 startActivity(intent);
@@ -92,6 +127,7 @@ public class DisplayPdfActivity extends AppCompatActivity {
                         String name = list.get(pos).getPdfName();
                         db.deleteById(name);
                     }
+
                 }
             }
         });

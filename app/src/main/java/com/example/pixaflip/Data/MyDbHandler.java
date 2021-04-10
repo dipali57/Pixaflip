@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.example.pixaflip.Data.MyFav;
+import com.example.pixaflip.ui.home.HomeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,15 +22,27 @@ public class MyDbHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String create = "CREATE TABLE " + Params.TABLE_NAME + "("
-                + Params.KEY_ID + " INTEGER PRIMARY KEY," + Params.KEY_NAME
-                + " TEXT, " + Params.KEY_URL + " TEXT" + ")";
+                + Params.KEY_ID + " INTEGER PRIMARY KEY,"
+                + Params.KEY_NAME + " TEXT, "
+                + Params.KEY_URL + " TEXT" + ")";
+
+/*
+        final String create2 = "CREATE TABLE " + Params.TABLE_NAME2 + "("
+                + Params.KEY_ID + " INTEGER PRIMARY KEY,"
+                + Params.KEY_FROM + " TEXT, "
+                + Params.KEY_TO + " TEXT,"
+                + Params.KEY_TIMESTAMP + " TEXT" + ")";*/
+
         Log.d("dbPixa", "Query being run is : "+ create);
+
+        //Log.d("dbUSER", "Query being run is : "+ create2);
         db.execSQL(create);
+        //db.execSQL(create2);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        //db.execSQL("DROP TABLE IF EXISTS " +  Params.TABLE_NAME2);
     }
 
     public boolean isExist(String name){
@@ -83,4 +96,19 @@ public class MyDbHandler extends SQLiteOpenHelper {
         }
         return pdfList;
     }
+
+    /*
+    public void addUserAct(methods ua)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values1=new ContentValues ();
+        values1.put(Params.KEY_FROM, methods.getFrom());
+        values1.put(Params.KEY_TO, methods.getTo());
+        values1.put(Params.KEY_TIMESTAMP,methods.getTimestamp());
+
+
+        db.insert(Params.TABLE_NAME2, null, values1);
+        Log.d("dbh", "Successfully inserted");
+
+    }*/
 }

@@ -10,6 +10,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Profile</string>
     <string name="menu_slideshow">Favorite PDF</string>
-
     <string name="home_second">Home Second</string>
+    <string name="playVideo">Play Video</string>
+    <string name="nav_pdf">show pdf</string>
 </resources>

@@ -13,17 +13,31 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.pixaflip.user.UserDatabase;
+import com.example.pixaflip.user.methods;
 import com.spark.submitbutton.SubmitButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class DisplayCovidActivity extends AppCompatActivity {
 
     private static String context;
     private TextView mTextViewResult;
     private RequestQueue mQueue;
+
+    private String getDateTime()
+    {
+        SimpleDateFormat sd=new SimpleDateFormat ("yyyy-MM-ddcHH:mm:ss", Locale.getDefault ());
+        Date d=new Date ();
+        return sd.format(d);
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,12 +48,22 @@ public class DisplayCovidActivity extends AppCompatActivity {
       //  Button buttonParse = findViewById(R.id.showStatewise);
         SubmitButton state=findViewById(R.id.showStatewise);
 
+        UserDatabase nn=new UserDatabase ( DisplayCovidActivity.this );
+        // adduseract
+
         mQueue = Volley.newRequestQueue(this);
         jsonParse();
 
         state.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                UserDatabase db = new UserDatabase(DisplayCovidActivity.this);
+                methods m=new methods();
+                String from2 = m.setFrom ( "DisplayCovidActivity" );
+                String to2=m.setTo( "ShowStates" );
+                String timestamp2 =m.setTimestamp ( getDateTime () );
+                // model pro = new model(from2,to2,timestamp2);
+                db.adduseract (m);
                 startActivity(new Intent(DisplayCovidActivity.this, ShowStates.class));
             }
         });

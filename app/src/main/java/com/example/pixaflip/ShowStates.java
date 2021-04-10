@@ -19,12 +19,16 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.pixaflip.user.UserDatabase;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class ShowStates extends AppCompatActivity implements StateAdapter.OnItemClickListener{
 
@@ -49,8 +53,15 @@ public class ShowStates extends AppCompatActivity implements StateAdapter.OnItem
     String url = "https://api.rootnet.in/covid19-in/stats/latest";
     private ProgressBar progressBar;
 
-
     String status;
+
+    private String getDateTime()
+    {
+        SimpleDateFormat sd=new SimpleDateFormat ("yyyy-MM-ddcHH:mm:ss", Locale.getDefault ());
+        Date d=new Date();
+        return sd.format(d);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -149,6 +160,14 @@ public class ShowStates extends AppCompatActivity implements StateAdapter.OnItem
 
     @Override
     public void onItemClick(int position) {
+        UserDatabase db = new UserDatabase(ShowStates.this);
+
+        // String name =  pos.getLoc;MyState modal = courseModalArrayList.get(position);
+        //        holder.Location.setText(modal.getLoc());
+        String name = courseModalArrayList.get(position).getLoc ();
+
+        db.Adduser( "ShowStates",name,getDateTime() );
+
         Intent detailIntent = new Intent(this, DetailActivity.class);
         MyState clickedItem = courseModalArrayList.get(position);
         detailIntent.putExtra(EXTRA_LOCATION, clickedItem.getLoc());

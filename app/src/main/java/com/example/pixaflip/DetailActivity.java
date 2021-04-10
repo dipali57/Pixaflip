@@ -22,7 +22,6 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-
         Intent intent = getIntent();
         String Location = intent.getStringExtra(EXTRA_LOCATION);
         String ConfirmedI = intent.getStringExtra(EXTRA_CONFIRMEDI);

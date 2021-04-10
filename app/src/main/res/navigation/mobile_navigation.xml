@@ -18,6 +18,7 @@
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
             app:destination="@id/nav_home_second" />
     </fragment>
+
     <fragment
         android:id="@+id/nav_home_second"
         android:name="com.example.pixaflip.ui.home.HomeFragment"
@@ -51,4 +52,21 @@
         android:textColor="@color/background"
         android:textSize="20sp"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_video"
+        android:name="com.example.pixaflip.DisplayVideoActivity"
+        android:label="@string/playVideo">
+        <action
+            android:id="@+id/video_To_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_pdf"
+        android:name="com.example.pixaflip.DisplayPdfActivity"
+        android:label="@string/nav_pdf">
+        <action
+            android:id="@+id/video_To_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 </navigation>
